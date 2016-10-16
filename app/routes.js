@@ -8,6 +8,11 @@ module.exports = function(app, passport){
 		res.render('login.ejs', {message: req.flash('loginMessage')});
 	});
 	// Process login form
+	app.post('/login', passport.authenticate('local-login', {
+		successRedirect: '/profile',
+		failureRedirect: '/login',
+		failureFlash: true
+	}));
 	// Signup
 	app.get('/signup', function(req, res){
 		res.render('signup.ejs', {message: req.flash('signupMessage')});
@@ -25,7 +30,7 @@ module.exports = function(app, passport){
 	// Logout
 	app.get('/logout', function(req, res){
 		req.logout();
-		req.redirect('/');
+		res.redirect('/');
 	});
 };
 

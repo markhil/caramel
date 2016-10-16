@@ -53,7 +53,7 @@ module.exports = function(passport){
 				return done(err);
 			if (!user)
 				return done(null, false, req.flash('loginMessage', 'Email does not exist'));
-			if(!user.validPasssword(password))
+			if(!user.validPassword(password))
 				return done(null, false, req.flash('loginMessage', 'Incorrect password'));
 			return done(null, user);
 		});
