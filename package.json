@@ -1,0 +1,19 @@
+{
+  "name": "caramel",
+  "version": "1.0.0",
+  "description": "caramel slice review app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markhil/caramel.git"
+  },
+  "author": "MH",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markhil/caramel/issues"
+  },
+  "homepage": "https://github.com/markhil/caramel#readme"
+}
